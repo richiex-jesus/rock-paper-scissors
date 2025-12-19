@@ -3,13 +3,13 @@ function getComputerChoice() {
     let y = "paper";
     let z = "scissors";
 
-let numberGenerated = Math.floor(Math.random() * 100) + 1
+let numberGenerated = Math.floor(Math.random() * 90) + 1;
 
-    if (numberGenerated >= 1 && numberGenerated < 30) {
+    if (numberGenerated >= 1 && numberGenerated <= 30) {
         return x
-    } else if (numberGenerated >= 30 && numberGenerated < 60) {
+    } else if (numberGenerated > 30 && numberGenerated <= 60) {
         return y
-    } else if (numberGenerated >= 60 && numberGenerated <= 100) {
+    } else if (numberGenerated > 60 && numberGenerated <= 90) {
         return z
     } else {
         return ""
@@ -17,8 +17,8 @@ let numberGenerated = Math.floor(Math.random() * 100) + 1
 }
 
 function getHumanChoice() {
-    let userInput = prompt("State your choice: rock, paper, scissors?")
-    let userInputFinal = userInput.toLowerCase()
+    let userInput = prompt("State your choice: rock, paper, scissors?");
+    let userInputFinal = userInput.toLowerCase();
 
     if (userInputFinal === "rock") {
         return "rock"
@@ -102,6 +102,6 @@ if (humanScore > computerScore) {
 
 }
 
-console.log(playGame())
+console.log(playGame());
 
 
