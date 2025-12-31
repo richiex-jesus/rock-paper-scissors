@@ -101,14 +101,14 @@ function endGame(humanScore, computerScore) {
     let gameWinner = document.getElementById('winner');
     if ((humanScore == 5) && (computerScore < 5)) {
         let computer = document.getElementById('computer-choice');
-        computer.remove();
+        // computer.remove();
         gameWinner.textContent = "The human has beaten the computer!";
         let container = document.getElementById('container');
         container.replaceChildren();
         restartGame();
     } else if ((computerScore == 5) && (humanScore < 5)) {
         let computer = document.getElementById('computer-choice');
-        computer.remove();
+        // computer.remove();
         gameWinner.textContent = "The computer has beaten the human!"
         let container = document.getElementById('container');
         container.replaceChildren();
